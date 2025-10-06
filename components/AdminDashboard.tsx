@@ -139,7 +139,7 @@ export default function AdminDashboard() {
                             onClick={() => setActiveTab("dashboard")}
                             className={`w-full xs:w-auto px-4 sm:px-6 py-2 rounded-md transition text-sm sm:text-base ${
                                 activeTab === "dashboard"
-                                    ? "bg-yellow-600 text-white"
+                                    ? "bg-yellow-700 text-white"
                                     : "text-gray-600 hover:text-gray-800"
                             }`}
                         >
@@ -149,7 +149,7 @@ export default function AdminDashboard() {
                             onClick={() => setActiveTab("agents")}
                             className={`w-full xs:w-auto px-4 sm:px-6 py-2 rounded-md transition text-sm sm:text-base ${
                                 activeTab === "agents"
-                                    ? "bg-yellow-600 text-white"
+                                    ? "bg-yellow-700 text-white"
                                     : "text-gray-600 hover:text-gray-800"
                             }`}
                         >
@@ -159,7 +159,7 @@ export default function AdminDashboard() {
                             onClick={() => setActiveTab("properties")}
                             className={`w-full xs:w-auto px-4 sm:px-6 py-2 rounded-md transition text-sm sm:text-base ${
                                 activeTab === "properties"
-                                    ? "bg-yellow-600 text-white"
+                                    ? "bg-yellow-700 text-white"
                                     : "text-gray-600 hover:text-gray-800"
                             }`}
                         >
