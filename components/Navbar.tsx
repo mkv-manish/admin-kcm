@@ -12,11 +12,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-yellow-600 text-white flex justify-between items-center p-4">
-      <h1 className="font-bold text-lg">Admin Dashboard</h1>
+    <nav className="bg-yellow-600 text-white flex justify-between items-center py-6 px-8">
+      <h1 className="font-bold text-2xl">Admin Dashboard</h1>
       <button
         onClick={handleLogout}
-        className="bg-white text-yellow-600 px-3 py-1 rounded hover:bg-gray-200 transition"
+        className="bg-white text-yellow-600 px-4 py-2 rounded hover:bg-gray-200 transition"
       >
         Logout
       </button>
