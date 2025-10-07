@@ -45,12 +45,12 @@ export default function AdminDashboard() {
             title: "Premium Plot in Delhi",
             price: 5000000,
             location: "Delhi",
-            thumbnail: "/assets/hero-banner.png",
+            thumbnail: "/hero-banner.png",
             category: "plot",
             listingType: "sale",
             area: 1200,
             description: "Premium residential plot in prime location with all amenities",
-            images: ["/assets/hero-banner.png"],
+            images: ["/properties-img.png"],
             contactMobile: "9876543210",
             contactEmail: "contact@example.com",
             agentId: "agent1",
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
             listingType: "rental",
             area: 3000,
             description: "Luxurious villa with modern amenities and beautiful garden",
-            images: ["/assets/hero-banner.png"],
+            images: ["/properties-img.png"],
             contactMobile: "9876543211",
             contactEmail: "villa@example.com",
             agentId: "agent2",
@@ -359,6 +359,23 @@ export default function AdminDashboard() {
                                                 <div className="mb-2 sm:mb-4">
                                                     <label className="block text-xs sm:text-sm font-medium text-gray-700">Submitted At</label>
                                                     <p className="text-gray-900 text-sm sm:text-base">{formatDate(property.submittedAt)}</p>
+                                                </div>
+                                                <div className="mb-2 sm:mb-4">
+                                                    <label className="block text-xs sm:text-sm font-medium text-gray-700">Images</label>
+                                                    <div className="flex flex-wrap gap-2">
+                                                        {property.images && property.images.length > 0 ? (
+                                                            property.images.map((imgUrl: string, idx: number) => (
+                                                                <img
+                                                                    key={idx}
+                                                                    src={imgUrl}
+                                                                    alt={`Property image ${idx + 1}`}
+                                                                    className="w-16 h-16 object-cover rounded border"
+                                                                />
+                                                            ))
+                                                        ) : (
+                                                            <span className="text-gray-500 text-xs sm:text-sm">No images</span>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="space-y-2 sm:space-y-4">
