@@ -1,7 +1,3 @@
-// Email: admin@example.com
-// Password: admin123
-
-
 
 export type AgentApplication = {
   id: string;
@@ -84,7 +80,7 @@ export const properties: Property[] = [
     listingType: "sale",
     area: 1200,
     description: "Premium residential plot",
-    images: ["/assets/hero-banner.png"],
+    images: ["/properties-img.png"],
     contactMobile: "9876543210",
     contactEmail: "contact@example.com",
     agentId: "1",
@@ -104,7 +100,7 @@ export const properties: Property[] = [
     listingType: "rental",
     area: 3000,
     description: "Luxurious villa",
-    images: ["/assets/hero-banner.png"],
+    images: ["/properties-img.png"],
     contactMobile: "9876543211",
     contactEmail: "villa@example.com",
     agentId: "2",

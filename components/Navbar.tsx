@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-yellow-700  flex justify-between items-center py-6 px-8">
+    <nav className="bg-yellow-600  flex justify-between items-center py-6 px-8">
       <div className="flex items-center gap-3">
         <img src="/kcm-logo.png" alt="KCM Logo" className="h-22 w-auto md:h-20  object-contain" />
       </div>
