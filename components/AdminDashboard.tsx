@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { AgentApplication, Property } from "./../utils/data";
+import UploadPage from "./isUpload";
 
-type TabType = "dashboard" | "agents" | "properties";
+type TabType = "dashboard" | "agents" | "properties" | "uploadProperties";
 
 export default function AdminDashboard() {
     const [activeTab, setActiveTab] = useState<TabType>("dashboard");
@@ -120,6 +121,7 @@ export default function AdminDashboard() {
         }
     };
 
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-4 sm:py-6 md:py-8">
             <div className="container mx-auto px-2 sm:px-4">
@@ -134,7 +136,7 @@ export default function AdminDashboard() {
 
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-6 sm:mb-8">
-                    <div className="bg-white rounded-lg p-1 shadow-lg flex flex-col xs:flex-row sm:flex-row gap-2 sm:gap-0 w-full max-w-md">
+                    <div className="bg-white rounded-lg p-1 shadow-lg flex flex-col xs:flex-row sm:flex-row gap-2 sm:gap-0 w-full max-w-lg">
                         <button
                             onClick={() => setActiveTab("dashboard")}
                             className={`w-full xs:w-auto px-4 sm:px-6 py-2 rounded-md transition text-sm sm:text-base ${
@@ -164,6 +166,16 @@ export default function AdminDashboard() {
                             }`}
                         >
                             Property Management
+                        </button>
+                        <button
+                            onClick={() => setActiveTab("uploadProperties")}
+                            className={` w-full xs:w-auto px-4 sm:px-6 py-2 rounded-md transition text-sm sm:text-base ${
+                                activeTab === "uploadProperties"
+                                    ? "bg-yellow-600 text-white"
+                                    : "text-gray-600 hover:text-gray-800"
+                            }`}
+                        >
+                            Upload properties
                         </button>
                     </div>
                 </div>
@@ -329,6 +341,14 @@ export default function AdminDashboard() {
                     </div>
                 )}
 
+                {activeTab === "uploadProperties" && (
+                    <div className="max-w-6xl mx-auto">
+                        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Properties Upload</h2>
+                            <UploadPage/>
+                        </div>
+                    </div>
+                )}
                 {activeTab === "properties" && (
                     <div className="max-w-6xl mx-auto">
                         <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">

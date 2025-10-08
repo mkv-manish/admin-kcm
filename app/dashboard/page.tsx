@@ -7,8 +7,6 @@ import Navbar from "../../components/Navbar";
 import { isLoggedIn } from "../../utils/auth";
 import AdminDashboard from "@/components/AdminDashboard";
 
-
-
 export default function AdminPage() {
   const router = useRouter();
 
